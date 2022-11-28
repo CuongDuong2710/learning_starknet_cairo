@@ -18,7 +18,11 @@ func array_sum(arr: felt*, size) -> felt {
 
 ## A low-level language with powerful syntactic sugar
 
+Cairo is not a high-level language. It’s a low-level language with some powerful syntactic sugar to allow writing maintainable code. The advantage is that the Cairo language allows you to write very efficient code (you can write in the Cairo language almost anything you can run on the Cairo machine).
+
 ## Recursion instead of loops
+
+The main reason for this is that `the Cairo memory is immutable` – once you write the value of a memory cell, this cell cannot change in the future. This is similar to pure functional languages, whose objects are also immutable, where you also have to replace loops with recursion for the same reason.
 
 ## The assert statement
 
