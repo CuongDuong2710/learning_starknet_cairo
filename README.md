@@ -37,3 +37,45 @@ which we use below, allows us to do two things: verify that two values are the s
 In Cairo when you don’t specify a type of a variable/argument, its type is a `field element` (represented by the keyword `felt`). In the context of Cairo, when we say “a field element” we mean an integer in the range **-P/2 < x < P/2** where **P** is a very large (prime) number (currently it is a 252-bit number, which is a number with 76 decimal digits). 
 
 The most important difference between integers and field elements is `division`: Division of field elements (and therefore division in Cairo) is not the integer division you have in many programming languages, where the integral part of the quotient is returned (so you get 7 / 3 = 2)
+
+```sh
+%builtins output
+
+from starkware.cairo.common.alloc import alloc
+from starkware.cairo.common.serialize import serialize_word
+
+func array_sum(arr: felt*, size) -> felt {
+    // ...
+}
+
+func main{output_ptr: felt*}() {
+    const ARRAY_SIZE = 3;
+
+    // Allocate an array.
+    let (ptr) = alloc();
+
+    // Populate some values in the array.
+    assert [ptr] = 9;
+    assert [ptr + 1] = 16;
+    assert [ptr + 2] = 25;
+
+    // Call array_sum to compute the sum of the elements.
+    let sum = array_sum(arr=ptr, size=ARRAY_SIZE);
+
+    // Write the sum to the program output.
+    serialize_word(sum);
+
+    return ();
+}
+```
+
+Here we have a few additional new things:
+
+1. **Memory allocation**: We use the standard library function alloc() to allocate a new memory segment. In practice the exact location of the allocated memory will be determined only when the program terminates, which allows us to avoid specifying the size of the allocation.
+
+2. **Constants**: A constant in Cairo is defined using const `CONST_NAME = <expr>`; where `<expr>` must be an integer (a field element, to be precise), known at compile time.
+
+```sh
+Program output:
+  50
+```
