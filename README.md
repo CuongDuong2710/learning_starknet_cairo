@@ -26,7 +26,9 @@ The main reason for this is that `the Cairo memory is immutable` – once you wr
 
 ## The assert statement
 
-> assert <expr0> = <expr1>;
+```sh
+assert <expr0> = <expr1>;
+```
 
 which we use below, allows us to do two things: verify that two values are the same (as you may have expected), but `also to assign a value to a memory cell`. For example, assert [ptr] = 0; will set the value of the memory cell at address ptr to 0 (if it was not set before).
     
