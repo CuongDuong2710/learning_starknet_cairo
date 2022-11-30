@@ -1,0 +1,64 @@
+[Install Linux WSL for Windows](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+## Check version of Ubuntu
+
+lsb_release -a
+
+## Install software
+
+sudo apt-get install python3.9
+
+## Show path
+
+which ls
+echo $PATH
+
+## show directories
+
+`ls` to list the files
+`ls -a` to include hidden files
+`ls -l` for a long listing format
+
+## Install python3-venv
+
+sudo apt install python3.9-venv
+
+## Check python version
+
+python3 --version
+
+## Install python3-dev
+
+For Python 3.x use:
+
+> sudo apt-get install python3-dev
+
+or for a specific version of Python 3, replace x with the minor version in
+
+> sudo apt-get install python3.x-dev (using `python3.9`)
+
+> This will fix error when install ` pip3 install fastecdsa`
+
+## Create a file
+
+- Create a file
+
+touch file_name
+
+- Enter text into file
+
+cat > file_name
+
+- Save
+
+Ctrl + D
+
+---
+
+## Source
+
+[StarkNet Quick Start](https://starknet.io/docs/quickstart.html#quickstart)
+
+[Linux command line cheatsheet](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
+
+[Create file](https://www.how2shout.com/linux/how-to-create-a-file-in-ubuntu-linux-using-command-gui/)
