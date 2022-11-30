@@ -1,8 +1,14 @@
-[Install Linux WSL for Windows](https://learn.microsoft.com/en-us/windows/wsl/install)
+[Install Windows Subsystem Linux - WSL - for Windows](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 ## Check version of Ubuntu
 
 lsb_release -a
+
+## Ensure everything is up to date 
+
+sudo apt update
+
+sudo apt upgrade
 
 ## Install software
 
@@ -53,6 +59,13 @@ cat > file_name
 
 Ctrl + D
 
+## Run html file in WSL Visual Code
+
+[Browsersync] Access URLs:
+ ----------------------------------------
+       Local: http://localhost:10001
+    External: http://172.27.162.244:10001
+
 ---
 
 ## Source
@@ -62,3 +75,5 @@ Ctrl + D
 [Linux command line cheatsheet](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 
 [Create file](https://www.how2shout.com/linux/how-to-create-a-file-in-ubuntu-linux-using-command-gui/)
+
+[WSL documentation](https://learn.microsoft.com/en-us/windows/wsl/)
