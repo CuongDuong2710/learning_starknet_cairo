@@ -181,3 +181,6 @@ func set_a_random_value{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_ch
 
     return ();
 }
+
+// Transaction
+// https://testnet.starkscan.co/tx/0x78ac2926092f100e79fce5fe02888a3c05b8e017288ca5b8bec4feae1d00a17
