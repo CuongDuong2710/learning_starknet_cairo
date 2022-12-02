@@ -109,3 +109,7 @@ func set_user_values_internal{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, ra
     user_values_storage.write(account, length - 1, [array]);
     return ();
 }
+
+// Hint
+// 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+// https://testnet.starkscan.co/tx/0x15814d16c61c3ead4ece3cf9258adfc515e7a624466e77e4b1cdc26e14e15c6#events
