@@ -81,3 +81,6 @@ func claim_points{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_pt
     distribute_points(sender_address, 2);
     return ();
 }
+
+// transaction
+// https://testnet.starkscan.co/tx/0x21004f2d00237cb24e32c8d28b6a1fddb63bb8a673b07a057c995dee8a75fb8

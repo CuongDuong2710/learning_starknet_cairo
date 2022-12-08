@@ -110,7 +110,7 @@ func set_ex_10b_address{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_ch
 
 
 // 1. Use ex10 to get ex10b address by Hex
-// 2. Search ex10b contract by address
+// 2. Search ex10b contract on Voyager or Starkscan by address
 // 3. Get secret value in ex10b contract
 // 4. Return ex10 and claim_points
 
