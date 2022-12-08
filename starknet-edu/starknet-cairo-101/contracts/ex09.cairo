@@ -100,3 +100,8 @@ func get_sum_internal{range_check_ptr}(length: felt, array: felt*) -> (sum: felt
     // The return function targets the body of this function
     return (sum,);
 }
+
+// when array =  a,b,c,d  I guess it's mean  s
+// (d > 0 )  and (d = c * 2) and (b = c * 2) and (a = b * 2)
+// https://testnet.starkscan.co/tx/0x5e0a396c7a46d57b8d4e52fe1871fdc475a4438ed6e2a32ab83bc1ec2d697c#overview
+// 80, 40, 20, 10
