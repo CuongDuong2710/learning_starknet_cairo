@@ -107,3 +107,18 @@ func set_ex_10b_address{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_ch
     setup_is_finished.write(1);
     return ();
 }
+
+
+// 1. Use ex10 to get ex10b address by Hex
+// 2. Search ex10b contract by address
+// 3. Get secret value in ex10b contract
+// 4. Return ex10 and claim_points
+
+// ex10 address
+// https://testnet.starkscan.co/contract/0x8415762f4b0b0f44e42ac1d103ac93c3ea94450a15bb65b99bbcc816a9388#write-contract
+
+// ex10b address
+// https://testnet.starkscan.co/contract/0x070e27636818c69fb3e17451bd077c971524cb2a5a38e79b2d8a09034b7e1a9c#read-contract
+
+// transaction
+// https://testnet.starkscan.co/tx/0x1f44413bf2be2d7109e631dda728a95a6af7ed6bf175a061a06af95de64572c
