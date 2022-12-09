@@ -33,9 +33,9 @@ https://testnet.starkscan.co/tx/0x5e0a396c7a46d57b8d4e52fe1871fdc475a4438ed6e2a3
 
 ## Exercise 10
 
-1. Use ex10 to get ex10b address by Hex
+1. Use ex10 to get `ex10b address` by Hex
 2. Search ex10b contract on Voyager or Starkscan by address
-3. Get secret value in ex10b contract
+3. Get `secret value` in ex10b contract
 4. Return ex10 and claim_points
 
 ```sh
@@ -47,4 +47,14 @@ https://testnet.starkscan.co/contract/0x070e27636818c69fb3e17451bd077c971524cb2a
 
 transaction
 https://testnet.starkscan.co/tx/0x1f44413bf2be2d7109e631dda728a95a6af7ed6bf175a061a06af95de64572c
+```
+## Exercise 11
+
+1. Read `secret_value()` view function at ex11_base.cairo contract
+2. Click query `secret_value` button in Starkscan or Voyager to get value `(secret_value + 42069)`
+3. Input `secret_value` in Write contract to claim points
+
+```sh
+transaction
+https://testnet.starkscan.co/tx/0x6d253ab7a50410a7142a184372b5dba1371cbac7b415e08ea2d24a153349065#overview
 ```
