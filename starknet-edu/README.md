@@ -58,3 +58,19 @@ https://testnet.starkscan.co/tx/0x1f44413bf2be2d7109e631dda728a95a6af7ed6bf175a0
 transaction
 https://testnet.starkscan.co/tx/0x6d253ab7a50410a7142a184372b5dba1371cbac7b415e08ea2d24a153349065#overview
 ```
+
+## Exercise 12
+
+1. At `Write Contract`, press `assign_user_slot` to emit event `assign_user_slot_called`
+2. Get transaction of `assign_user_slot_called` and `secret_value + 32`
+
+```sh
+https://testnet.starkscan.co/tx/0x00d156e761260256de1b84e2e9bb29131d7868ed6e731fc839cf8155308b459e
+
+secret_value	felt	"6162"
+```
+
+3. At `Write Contract`, input `expected_value = secret_value - 32`  (6130)
+
+
+
