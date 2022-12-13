@@ -72,5 +72,28 @@ secret_value	felt	"6162"
 
 3. At `Write Contract`, input `expected_value = secret_value - 32`  (6130)
 
+## Exercise 13
+
+1. At `Write Contract`, press `assign_user_slot` to emit event `assign_user_slot_called`
+2. Get transaction of `assign_user_slot_called` and `rank (slot)` of user *key to find secret value*
+
+```sh
+https://testnet.starkscan.co/tx/0x7822736a35382ef773fa481b16b885033bbe89ad8b9aff3e6164aa3fb3973c4#events
+
+rank	felt "11"
+```
+
+3. At `Transaction` of ex13 contract `https://testnet.starkscan.co/contract/0x2bae9190076c4252289b8a8671277cef57318192cff20c736808b0c71095895#transactions`,constructor inputs arr[] parameter
+4. Count at `secret value` position (rank or slot) to find exact number at hexadecimal, just be aware that that was stored backawards.
+
+Or use this link and input `transaction hash`:
+
+```sh
+https://alpha4.starknet.io/feeder_gateway/get_transaction?transactionHash=0x06c2eafb7708f38a81c5a772d8d76ebf5a28fd27939df273a6650147e662c838
+```
+
+
+
+
 
 
