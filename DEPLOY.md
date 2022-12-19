@@ -1,3 +1,6 @@
+[Starknet CLI](https://docs.starknet.io/documentation/tools/CLI/commands/#starknet_deploy)
+[Deploy StarkNet](https://medium.com/starknet-edu/deploying-to-starknet-with-the-universal-deployer-contract-c6de07092bfb)
+
 Compile
 
 ```sh
