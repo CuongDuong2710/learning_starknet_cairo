@@ -1,20 +1,23 @@
+## Source
+
 [Starknet CLI](https://docs.starknet.io/documentation/tools/CLI/commands/#starknet_deploy)
+
 [Deploy StarkNet](https://medium.com/starknet-edu/deploying-to-starknet-with-the-universal-deployer-contract-c6de07092bfb)
 
-Compile
+## Compile
 
 ```sh
 mkdir comp
 starknet-compile src/ERC721_ex1.cairo --output comp/ERC721.json
 ```
 
-Declare contact
+## Declare contact
 
 ```sh
 starknet declare --contract comp/ERC721_ex1.json --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
 ```
 
-Deploy
+## Deploy
 
 ```sh
 starknet deploy --contract comp/ERC721_ex1.json --inputs <name> <symbol> <owner> --network alpha-goerli --no_wallet
@@ -25,11 +28,13 @@ starknet deploy --class_hash CLASH_HASH
 
 starknet deploy --inputs 71942470984044 4279881 1113919593762118687475376511143865116397738250343892252580464580248600753728 --network alpha-goerli  --class_hash 0x566df6ea2502956a6185e076c01b567f5346b2ae5df81e1d6d4520fe6adf551 --contract artifacts/ERC721.json 
 
-Error
+## Error
 
 > starknet: error: the following arguments are required: --class_hash
 
-Create new account and deploy. Then can declare contract
+
+### Solution: Create new account and deploy. Then can declare contract
+
 ```sh
 starknet new_account
 
@@ -61,7 +66,7 @@ Contract class hash: 0x566df6ea2502956a6185e076c01b567f5346b2ae5df81e1d6d4520fe6
 Transaction hash: 0x4490250283c4dae852706d1be30acf0b00d3744cb3122a2f76336f9b6d2233
 ```
 
-Python utils
+## Python utils
 
 ```sh
 $ python -i utils.py
