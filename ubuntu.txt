@@ -77,3 +77,5 @@ Ctrl + D
 [Create file](https://www.how2shout.com/linux/how-to-create-a-file-in-ubuntu-linux-using-command-gui/)
 
 [WSL documentation](https://learn.microsoft.com/en-us/windows/wsl/)
+
+[Copy folder from Windows to WSL](https://stackoverflow.com/questions/42586120/copy-files-from-windows-to-windows-subsystem-for-linux-wsl)
