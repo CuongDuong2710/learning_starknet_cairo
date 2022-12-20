@@ -4,6 +4,13 @@
 
 [Deploy StarkNet](https://medium.com/starknet-edu/deploying-to-starknet-with-the-universal-deployer-contract-c6de07092bfb)
 
+## Setup Python environment
+
+```sh
+python3.9 -m venv ~/cairo_venv
+source ~/cairo_venv/bin/activate
+```
+
 ## Compile
 
 ```sh
@@ -79,4 +86,10 @@ $ python -i utils.py
 
 >>> hex_to_felt("0x027674c615e5be1C960307C293BDBb5d675ED8955d2bF54B7ea0cc130792b640")
 1113919593762118687475376511143865116397738250343892252580464580248600753728
+```
+
+## Default account
+
+```sh
+cat ~/.starknet_accounts/starknet_open_zeppelin_accounts.json
 ```

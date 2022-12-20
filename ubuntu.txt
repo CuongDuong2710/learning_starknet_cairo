@@ -43,7 +43,13 @@ or for a specific version of Python 3, replace x with the minor version in
 
 > sudo apt-get install python3.x-dev (using `python3.9`)
 
+sudo apt-get install python3.9-dev
+
 > This will fix error when install ` pip3 install fastecdsa`
+>
+> Or:
+>
+> [Error-command-x86-64-linux-gnu-gcc-failed-with-exit](https://stackoverflow.com/questions/26053982/setup-script-exited-with-error-command-x86-64-linux-gnu-gcc-failed-with-exit)
 
 ## Create a file
 
@@ -58,6 +64,20 @@ cat > file_name
 - Save
 
 Ctrl + D
+
+## Install cairo env
+
+> python3.9 -m venv ~/cairo_venv
+>
+> source ~/cairo_venv/bin/activate
+
+## Install the cairo-lang Python package using:
+
+> pip3 install cairo-lang
+>
+> Or:
+>
+> pip3 install cairo-lang-0.10.3.zip
 
 ## Run html file in WSL Visual Code
 
