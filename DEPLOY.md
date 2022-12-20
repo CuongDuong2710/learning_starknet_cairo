@@ -21,7 +21,7 @@ starknet-compile src/ERC721_ex1.cairo --output comp/ERC721.json
 ## Declare contact
 
 ```sh
-starknet declare --contract comp/ERC721_ex1.json --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
+starknet declare --contract comp/ERC721_ex1.json --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount --network alpha-goerli
 ```
 
 ## Deploy
