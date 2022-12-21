@@ -1,0 +1,95 @@
+//	Setup Python environment
+
+python3.9 -m venv ~/cairo_venv
+
+source ~/cairo_venv/bin/activate
+
+// NEW
+
+starknet new_account --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount --network alpha-goerli
+
+starknet new_account --account=braavos --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount --network alpha-goerli
+
+// DEPLOY ACCOUNT
+
+starknet deploy_account --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount --network alpha-goerli
+
+starknet deploy_account --account=__default__ --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount --network alpha-goerli
+
+// COMPILE
+
+starknet-compile contracts/ERC721/ERC721.cairo --output artifacts/ERC721.json
+
+// DECLARE
+
+starknet declare --contract artifacts/ERC721.json --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount --network alpha-goerli 
+
+starknet declare --contract artifacts/ERC721.json --network=alpha-goerli --account braavos --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
+
+
+// DEPLOY CONTRACT
+
+starknet deploy --class_hash 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0 --no_wallet --network alpha-goerli
+
+starknet deploy --inputs 71942470984044 4279881 1278422996337681985896402769278767801420698069458251493461957283551933138568 --network alpha-goerli  --class_hash 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0 --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
+
+starknet deploy --contract artifacts/ERC721.json --inputs 71942470984044 4279881 1278422996337681985896402769278767801420698069458251493461957283551933138568 --network alpha-goerli --no_wallet --class_hash 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0
+
+// HEX TO FELT
+
+python -i utils.py
+
+hex_to_felt("0x02d38fd0697631574f2e30505e32cd18d63354ef2c9ee37c83f5c7fee2808688")
+
+
+==============================================================================
+{
+    "alpha-goerli": {
+        "__default__": {
+            "private_key": "0x358cc2fefa0fd0b070c62645955d1a33a781f2211ace69ef3a8ba8ea8a8ff7f",
+            "public_key": "0x177cf3769eacb1565d81c86a4e75fc565e550e1771a6d848f85fc16a1af2bb3",
+            "salt": "0x4f71323845142229031270123eca9f3600dc8819300363ebb6d83ddf3e2bfd1",
+            "address": "0x61838be48daba7bb1a89435fc39d6a2a171e9b9d9f2cc524cdc535d2c047a7a",
+            "deployed": true
+        },
+        "cuong": {
+            "private_key": "0x56d50dbfb1ec8d7481cb6a7c0fab3a8c37902064dcf11e1008a44fcd43a2fab",
+            "public_key": "0x70595689603d5524fc76aa5512949f51cda1e8cde754c680fdcbad04bdf9427",
+            "salt": "0x725ef9fe79d836aac53206389fdbb2ba291c7a7dd32a15d7aee75c756b1376d",
+            "address": "0x602e19cb8357b2fe5c56772e28501c9fb261f03e58cd1b84ecfd11633c3cc91",
+            "deployed": true
+        },
+        "braavos": {
+            "private_key": "0x02af283d3a2fbe4feb563493a287a8f7045a2b343b0624936b9a3ea49865159b",
+            "public_key": "0x04c5fa3455b7a390df5067bba3796c3440e59d747f817aa66ecd256ccaacfaea",
+            "address": "0x02d38fd0697631574f2e30505e32cd18d63354ef2c9ee37c83f5c7fee2808688"
+        }
+    }
+}
+
+// DECLARE braavos
+
+starknet declare --contract artifacts/ERC721.json --network=alpha-goerli --account braavos --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
+
+Sending the transaction with max_fee: 0.000000 ETH (19493247 WEI).
+Declare transaction was sent.
+Contract class hash: 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0
+Transaction hash: 0x39f199defdd2a7ddc1940bb86d58559587af611ac32739fb7b2da0db102c341
+
+// DECLARE __default__
+
+starknet declare --contract artifacts/ERC721.json --network=alpha-goerli --account __default__ --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
+
+Sending the transaction with max_fee: 0.000000 ETH (20642805 WEI).
+Declare transaction was sent.
+Contract class hash: 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0
+Transaction hash: 0x14c32edaa25fd74c89b44283e50bd52da434002418583cf5411ba169d528db1
+
+// DEPLOY CONTRACT
+
+starknet deploy --inputs 71942470984044 4279881 1278422996337681985896402769278767801420698069458251493461957283551933138568 --network alpha-goerli  --class_hash 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0 --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
+Sending the transaction with max_fee: 0.000000 ETH (181815475 WEI).
+Invoke transaction for contract deployment was sent.
+Contract address: 0x0546fe1e5409eac2588e6fb7d16778dc9bf2ecf853614326de47668f71599ef0
+Transaction hash: 0x51c89bacd5a310ce0ac26a69b8fa09278e04304e4909a2b8f6f2cf6884e48cf
+
