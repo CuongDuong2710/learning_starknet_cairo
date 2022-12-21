@@ -29,11 +29,17 @@ starknet declare --contract artifacts/ERC721.json --network=alpha-goerli --accou
 
 // DEPLOY CONTRACT
 
+1. no_wallet
+
 starknet deploy --class_hash 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0 --no_wallet --network alpha-goerli
+
+starknet deploy --contract artifacts/ERC721.json --inputs 71942470984044 4279881 1278422996337681985896402769278767801420698069458251493461957283551933138568 --network alpha-goerli --no_wallet --class_hash 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0
+
+2. wallet
 
 starknet deploy --inputs 71942470984044 4279881 1278422996337681985896402769278767801420698069458251493461957283551933138568 --network alpha-goerli  --class_hash 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0 --wallet starkware.starknet.wallets.open_zeppelin.OpenZeppelinAccount
 
-starknet deploy --contract artifacts/ERC721.json --inputs 71942470984044 4279881 1278422996337681985896402769278767801420698069458251493461957283551933138568 --network alpha-goerli --no_wallet --class_hash 0x2935fa4a0e30399fe015f129559fd3a3e997959d6e19c87d87c97c53eddf7b0
+
 
 // HEX TO FELT
 
