@@ -33,7 +33,11 @@ Or:
 starknet deploy --class_hash CLASH_HASH
 ```
 
+> Example
+
+```sh
 starknet deploy --inputs 71942470984044 4279881 1113919593762118687475376511143865116397738250343892252580464580248600753728 --network alpha-goerli  --class_hash 0x566df6ea2502956a6185e076c01b567f5346b2ae5df81e1d6d4520fe6adf551 --contract artifacts/ERC721.json 
+```
 
 ## Error
 
